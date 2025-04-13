@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Checkbox, CheckboxIndicator } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CopyBlock, dracula } from "react-code-blocks"
 import { Label } from "@/components/ui/label"
