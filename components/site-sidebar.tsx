@@ -69,6 +69,30 @@ const sidebarNavItems = [
         title: "Carousel",
         href: "/docs/components/carousel",
       },
+      {
+        title: "Chart",
+        href: "/docs/components/chart",
+      },
+      {
+        title: "Checkbox",
+        href: "/docs/components/checkbox",
+      },
+      {
+        title: "Collapsible",
+        href: "/docs/components/collapsible",
+      },
+      {
+        title: "ComboBox",
+        href: "/docs/components/combobox",
+      },
+      {
+        title: "Command",
+        href: "/docs/components/command",
+      },
+      {
+        title: "Context Menu",
+        href: "/docs/components/context-menu",
+      },
     ],
   },
 ];
