@@ -1,0 +1,186 @@
+export interface ComponentItem {
+    name: string
+    path: string
+    description: string
+    keywords: string[]
+    category?: string
+  }
+  
+  export const components: ComponentItem[] = [
+    {
+      name: "Accordion",
+      path: "/docs/components/accordion",
+      description: "A vertically stacked set of interactive headings that each reveal a section of content.",
+      keywords: ["collapse", "expand", "toggle", "disclosure", "accordion"],
+      category: "Disclosure",
+    },
+    {
+      name: "Alert",
+      path: "/docs/components/alert",
+      description: "Displays a callout for user attention.",
+      keywords: ["notification", "message", "alert", "info", "warning", "error"],
+      category: "Feedback",
+    },
+    {
+      name: "Alert Dialog",
+      path: "/docs/components/alert-dialog",
+      description: "A modal dialog that interrupts the user with important content and expects a response.",
+      keywords: ["modal", "popup", "dialog", "alert", "confirmation"],
+      category: "Overlay",
+    },
+    {
+      name: "Aspect Ratio",
+      path: "/docs/components/aspect-ratio",
+      description: "Displays content within a desired ratio.",
+      keywords: ["ratio", "responsive", "image", "video", "container"],
+      category: "Layout",
+    },
+    {
+      name: "Avatar",
+      path: "/docs/components/avatar",
+      description: "An image element with a fallback for representing the user.",
+      keywords: ["profile", "picture", "user", "avatar", "image"],
+      category: "Data Display",
+    },
+    {
+      name: "Badge",
+      path: "/docs/components/badge",
+      description: "A small visual indicator for highlighting status or count.",
+      keywords: ["tag", "label", "status", "indicator", "badge"],
+      category: "Data Display",
+    },
+    {
+      name: "Button",
+      path: "/docs/components/button",
+      description: "A button component with different variants and sizes.",
+      keywords: ["button", "click", "action", "submit", "control"],
+      category: "Input",
+    },
+    {
+      name: "Calendar",
+      path: "/docs/components/calendar",
+      description: "A calendar component for date selection.",
+      keywords: ["date", "picker", "calendar", "datepicker", "time"],
+      category: "Input",
+    },
+    {
+      name: "Card",
+      path: "/docs/components/card",
+      description: "A card component for displaying content in a container.",
+      keywords: ["container", "box", "panel", "card", "surface"],
+      category: "Layout",
+    },
+    {
+      name: "Carousel",
+      path: "/docs/components/carousel",
+      description: "A carousel component for cycling through elements.",
+      keywords: ["slider", "gallery", "slideshow", "carousel", "images"],
+      category: "Data Display",
+    },
+    {
+      name: "Checkbox",
+      path: "/docs/components/checkbox",
+      description: "A control that allows the user to toggle between checked and unchecked states.",
+      keywords: ["toggle", "check", "input", "form", "control"],
+      category: "Input",
+    },
+    {
+      name: "Chart",
+      path: "/docs/components/chart",
+      description: "A component for displaying data visualizations.",
+      keywords: ["graph", "visualization", "data", "chart", "analytics"],
+      category: "Data Display",
+    },
+    {
+      name: "Collapsible",
+      path: "/docs/components/collapsible",
+      description: "An interactive component that can be expanded or collapsed.",
+      keywords: ["expand", "collapse", "toggle", "disclosure", "hide"],
+      category: "Disclosure",
+    },
+    {
+      name: "Combobox",
+      path: "/docs/components/combobox",
+      description: "A control that combines a text input with a listbox, allowing users to filter a list of options.",
+      keywords: ["autocomplete", "dropdown", "select", "filter", "input"],
+      category: "Input",
+    },
+    {
+      name: "Command",
+      path: "/docs/components/command",
+      description: "A command palette for keyboard-first interfaces.",
+      keywords: ["command", "palette", "search", "keyboard", "navigation"],
+      category: "Navigation",
+    },
+    {
+      name: "Context Menu",
+      path: "/docs/components/context-menu",
+      description: "A menu that appears on right-click or long-press.",
+      keywords: ["right-click", "menu", "popup", "context", "dropdown"],
+      category: "Overlay",
+    },
+    {
+      name: "Data Table",
+      path: "/docs/components/data-table",
+      description: "A powerful table component for displaying and manipulating data.",
+      keywords: ["table", "grid", "data", "sort", "filter"],
+      category: "Data Display",
+    },
+    {
+      name: "Date Picker",
+      path: "/docs/components/date-picker",
+      description: "A component for selecting dates and date ranges.",
+      keywords: ["date", "calendar", "picker", "time", "input"],
+      category: "Input",
+    },
+    {
+      name: "Dialog",
+      path: "/docs/components/dialog",
+      description: "A window overlaid on the primary window, rendering the content underneath inert.",
+      keywords: ["modal", "popup", "overlay", "dialog", "window"],
+      category: "Overlay",
+    },
+    {
+      name: "Drawer",
+      path: "/docs/components/drawer",
+      description: "A panel that slides out from the edge of the screen.",
+      keywords: ["sidebar", "panel", "slide", "offcanvas", "navigation"],
+      category: "Overlay",
+    },
+    {
+      name: "Dropdown Menu",
+      path: "/docs/components/dropdown-menu",
+      description: "A menu that appears when triggered by a button.",
+      keywords: ["menu", "dropdown", "popup", "select", "options"],
+      category: "Overlay",
+    },
+    {
+      name: "Form",
+      path: "/docs/components/form",
+      description: "A collection of form components with validation.",
+      keywords: ["input", "validation", "form", "submit", "field"],
+      category: "Input",
+    },
+    {
+      name: "Hover Card",
+      path: "/docs/components/hover-card",
+      description: "A card that appears when hovering over an element.",
+      keywords: ["tooltip", "popup", "hover", "card", "preview"],
+      category: "Overlay",
+    },
+    {
+      name: "Input",
+      path: "/docs/components/input",
+      description: "A form input component for collecting user input.",
+      keywords: ["text", "field", "form", "input", "entry"],
+      category: "Input",
+    },
+    {
+      name: "Tabs",
+      path: "/docs/components/tabs",
+      description: "A set of layered sections of content that display one panel at a time.",
+      keywords: ["tabs", "panel", "navigation", "sections", "content"],
+      category: "Navigation",
+    },
+  ]
+  
