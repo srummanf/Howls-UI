@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Check, ChevronsUpDown } from "lucide-react";
+import { Badge, Check, ChevronsUpDown, X } from "lucide-react";
 import {
   Command,
   CommandEmpty,
@@ -808,7 +808,7 @@ export {
                             (f) => f.value === val
                           );
                           return framework ? (
-                            <Badge key={val} variant="secondary">
+                            <Badge key={val} >
                               {framework.label}
                               <button
                                 className="ml-1 ring-offset-background rounded-full outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
