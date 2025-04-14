@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock, dracula } from "react-code-blocks"
-
+import { CopyBlock} from "react-code-blocks"
+import { customTheme } from "@/lib/code-theme"
 export default function PopoverPage() {
   const [activeTab, setActiveTab] = React.useState("preview")
 
@@ -223,7 +223,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -237,7 +237,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -246,7 +246,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -257,7 +257,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 
@@ -311,7 +311,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={positionCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={positionCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -355,7 +355,7 @@ export { Popover, PopoverTrigger, PopoverContent }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={alignmentCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={alignmentCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>

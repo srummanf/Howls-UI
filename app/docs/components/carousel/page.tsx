@@ -9,11 +9,32 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock } from "react-code-blocks";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function CarouselPage() {
   const [activeTab, setActiveTab] = React.useState("preview");
+
+  const customTheme = {
+    lineNumberColor: "var(--muted-foreground)",
+    lineNumberBgColor: "var(--muted)",
+    backgroundColor: "var(--muted)",
+    textColor: "var(--foreground)",
+    substringColor: "var(--primary)",
+    keywordColor: "var(--chart-1)",
+    attributeColor: "var(--chart-2)",
+    selectorAttributeColor: "var(--chart-3)",
+    docTagColor: "var(--chart-4)",
+    nameColor: "var(--chart-5)",
+    builtInColor: "var(--primary)",
+    stringColor: "var(--chart-3)",
+    variableColor: "var(--foreground)",
+    functionColor: "var(--chart-2)",
+    numberColor: "var(--chart-4)",
+    commentColor: "var(--muted-foreground)",
+    classnameColor: "var(--chart-5)",
+    tokenColor: "var(--foreground)",
+  }
 
   const installCode = `npm install embla-carousel-react`;
 
@@ -200,7 +221,7 @@ export function CarouselOrientation() {
                 text={usageCode}
                 language="tsx"
                 showLineNumbers
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </div>
@@ -219,7 +240,7 @@ export function CarouselOrientation() {
               <CopyBlock
                 text={installCode}
                 language="bash"
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </TabsContent>
@@ -228,7 +249,7 @@ export function CarouselOrientation() {
                 text={manualCode}
                 language="tsx"
                 showLineNumbers
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </TabsContent>
@@ -269,7 +290,7 @@ export function CarouselOrientation() {
                 text={responsiveCode}
                 language="tsx"
                 showLineNumbers
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </TabsContent>
@@ -292,7 +313,7 @@ export function CarouselOrientation() {
                 text={autoplayCode}
                 language="tsx"
                 showLineNumbers
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </TabsContent>
@@ -336,7 +357,7 @@ export function CarouselOrientation() {
                   text={orientationCode}
                   language="tsx"
                   showLineNumbers
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>

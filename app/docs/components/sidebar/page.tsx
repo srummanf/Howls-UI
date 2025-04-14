@@ -2,8 +2,9 @@
 
 import * as React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock} from "react-code-blocks"
 import { Button } from "@/components/ui/button"
+import { customTheme } from "@/lib/code-theme"
 import { Home, Settings, User, Mail, Calendar, FileText, Layers } from "lucide-react"
 
 const Sidebar = React.forwardRef<
@@ -482,7 +483,7 @@ export {
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -499,7 +500,7 @@ export {
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -513,7 +514,7 @@ export {
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 
@@ -572,7 +573,7 @@ export {
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={collapsibleCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={collapsibleCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -636,7 +637,7 @@ export {
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={variantsCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={variantsCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>

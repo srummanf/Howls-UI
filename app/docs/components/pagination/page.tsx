@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock} from "react-code-blocks"
+import { customTheme } from "@/lib/code-theme"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
 
@@ -89,7 +90,7 @@ export function PaginationDemo() {
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -97,7 +98,7 @@ export function PaginationDemo() {
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Installation</h2>
           <div className="rounded-md bg-muted p-4">
-            <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+            <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
           </div>
         </div>
 

@@ -4,10 +4,31 @@ import * as React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock } from "react-code-blocks"
 
 export default function CardPage() {
   const [activeTab, setActiveTab] = React.useState("preview")
+
+  const customTheme = {
+    lineNumberColor: "var(--muted-foreground)",
+    lineNumberBgColor: "var(--muted)",
+    backgroundColor: "var(--muted)",
+    textColor: "var(--foreground)",
+    substringColor: "var(--primary)",
+    keywordColor: "var(--chart-1)",
+    attributeColor: "var(--chart-2)",
+    selectorAttributeColor: "var(--chart-3)",
+    docTagColor: "var(--chart-4)",
+    nameColor: "var(--chart-5)",
+    builtInColor: "var(--primary)",
+    stringColor: "var(--chart-3)",
+    variableColor: "var(--foreground)",
+    functionColor: "var(--chart-2)",
+    numberColor: "var(--chart-4)",
+    commentColor: "var(--muted-foreground)",
+    classnameColor: "var(--chart-5)",
+    tokenColor: "var(--foreground)",
+  }
 
   const installationCode = `npx shadcn@latest add card`
 
@@ -148,7 +169,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -162,7 +183,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -171,7 +192,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -182,7 +203,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
         <div className="space-y-6">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 

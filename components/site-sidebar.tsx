@@ -142,6 +142,10 @@ const sidebarNavItems = [
         href: "/docs/components/navigation-menu",
       },
       {
+        title: "Newspaper Strip",
+        href: "/docs/components/newspaper-strip",
+      },
+      {
         title: "Pagination",
         href: "/docs/components/pagination",
       },

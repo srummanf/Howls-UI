@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock } from "react-code-blocks";
 import {
   Check,
   ChevronRight,
@@ -37,6 +37,27 @@ export default function DropdownMenuPage() {
   const [position, setPosition] = React.useState("bottom");
   const [bookmarked, setBookmarked] = React.useState(true);
   const [mailChecked, setMailChecked] = React.useState(true);
+
+  const customTheme = {
+    lineNumberColor: "var(--muted-foreground)",
+    lineNumberBgColor: "var(--muted)",
+    backgroundColor: "var(--muted)",
+    textColor: "var(--foreground)",
+    substringColor: "var(--primary)",
+    keywordColor: "var(--chart-1)",
+    attributeColor: "var(--chart-2)",
+    selectorAttributeColor: "var(--chart-3)",
+    docTagColor: "var(--chart-4)",
+    nameColor: "var(--chart-5)",
+    builtInColor: "var(--primary)",
+    stringColor: "var(--chart-3)",
+    variableColor: "var(--foreground)",
+    functionColor: "var(--chart-2)",
+    numberColor: "var(--chart-4)",
+    commentColor: "var(--muted-foreground)",
+    classnameColor: "var(--chart-5)",
+    tokenColor: "var(--foreground)",
+  }
 
   const installationCode = `npm i @radix-ui/react-dropdown-menu`;
 
@@ -486,7 +507,7 @@ export {
                 text={usageCode}
                 language="typescript"
                 showLineNumbers={true}
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </div>
@@ -506,7 +527,7 @@ export {
                   text={installationCode}
                   language="bash"
                   showLineNumbers={false}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -517,7 +538,7 @@ export {
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -532,7 +553,7 @@ export {
               text={usageCode}
               language="typescript"
               showLineNumbers={true}
-              theme={dracula}
+              theme={customTheme}
               codeBlock
             />
           </div>
@@ -592,7 +613,7 @@ export {
                     text={withIconsCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>
@@ -647,7 +668,7 @@ export {
                     text={subMenuCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>
@@ -692,7 +713,7 @@ export {
                     text={checkboxesCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>

@@ -3,12 +3,33 @@
 import * as React from "react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock } from "react-code-blocks"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { CalendarDays } from "lucide-react"
 
 export default function HoverCardPage() {
   const [activeTab, setActiveTab] = React.useState("preview")
+
+  const customTheme = {
+    lineNumberColor: "var(--muted-foreground)",
+    lineNumberBgColor: "var(--muted)",
+    backgroundColor: "var(--muted)",
+    textColor: "var(--foreground)",
+    substringColor: "var(--primary)",
+    keywordColor: "var(--chart-1)",
+    attributeColor: "var(--chart-2)",
+    selectorAttributeColor: "var(--chart-3)",
+    docTagColor: "var(--chart-4)",
+    nameColor: "var(--chart-5)",
+    builtInColor: "var(--primary)",
+    stringColor: "var(--chart-3)",
+    variableColor: "var(--foreground)",
+    functionColor: "var(--chart-2)",
+    numberColor: "var(--chart-4)",
+    commentColor: "var(--muted-foreground)",
+    classnameColor: "var(--chart-5)",
+    tokenColor: "var(--foreground)",
+  }
 
   const installationCode = `npm install @radix-ui/react-hover-card`
 
@@ -193,7 +214,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -207,7 +228,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -216,7 +237,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -227,7 +248,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 
@@ -280,7 +301,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={profileCardCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={profileCardCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -343,7 +364,7 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={positioningCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={positioningCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>

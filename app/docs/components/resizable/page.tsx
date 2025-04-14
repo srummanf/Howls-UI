@@ -2,12 +2,13 @@
 
 import * as React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock} from "react-code-blocks"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
+import { customTheme } from "@/lib/code-theme"
 
 export default function ResizablePage() {
   const [activeTab, setActiveTab] = React.useState("preview")
@@ -172,7 +173,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -186,7 +187,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -195,7 +196,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -206,7 +207,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 
@@ -242,7 +243,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={verticalCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={verticalCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -282,7 +283,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={multipleCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={multipleCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>

@@ -14,7 +14,7 @@ import {
   Area,
 } from "recharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock } from "react-code-blocks";
 
 const lineChartData = [
   { name: "Jan", uv: 400, pv: 2400, amt: 2400 },
@@ -42,6 +42,27 @@ const cssVars = {
   grid: "oklch(var(--ring))",
   axis: "oklch(var(--foreground))",
 };
+
+const customTheme = {
+  lineNumberColor: "var(--muted-foreground)",
+  lineNumberBgColor: "var(--muted)",
+  backgroundColor: "var(--muted)",
+  textColor: "var(--foreground)",
+  substringColor: "var(--primary)",
+  keywordColor: "var(--chart-1)",
+  attributeColor: "var(--chart-2)",
+  selectorAttributeColor: "var(--chart-3)",
+  docTagColor: "var(--chart-4)",
+  nameColor: "var(--chart-5)",
+  builtInColor: "var(--primary)",
+  stringColor: "var(--chart-3)",
+  variableColor: "var(--foreground)",
+  functionColor: "var(--chart-2)",
+  numberColor: "var(--chart-4)",
+  commentColor: "var(--muted-foreground)",
+  classnameColor: "var(--chart-5)",
+  tokenColor: "var(--foreground)",
+}
 
 const installationCode = `npm install recharts`;
 
@@ -187,7 +208,7 @@ export default function ChartPage() {
                 text={lineChartCode}
                 language="tsx"
                 showLineNumbers={true}
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </div>
@@ -196,7 +217,7 @@ export default function ChartPage() {
                 text={areaChartCode}
                 language="tsx"
                 showLineNumbers={true}
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </div>
@@ -210,7 +231,7 @@ export default function ChartPage() {
             <CopyBlock
               text={installationCode}
               language="bash"
-              theme={dracula}
+              theme={customTheme}
               codeBlock
             />
           </div>

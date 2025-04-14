@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock, dracula } from "react-code-blocks"
+import { CopyBlock } from "react-code-blocks"
+import { customTheme } from "@/lib/code-theme"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Search, Mail, Eye, EyeOff } from "lucide-react"
@@ -182,7 +183,7 @@ export { Input }`
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
             </div>
           </TabsContent>
         </Tabs>
@@ -196,7 +197,7 @@ export { Input }`
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={dracula} codeBlock />
+                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -205,7 +206,7 @@ export { Input }`
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -216,7 +217,7 @@ export { Input }`
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={dracula} codeBlock />
+            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
           </div>
         </div>
 
@@ -242,7 +243,7 @@ export { Input }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={labelsCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={labelsCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -275,7 +276,7 @@ export { Input }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={iconsCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={iconsCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -316,7 +317,7 @@ export { Input }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={passwordInputCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={passwordInputCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -342,7 +343,7 @@ export { Input }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={inputSizesCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={inputSizesCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>
@@ -391,7 +392,7 @@ export { Input }`
               </TabsContent>
               <TabsContent value="code">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={statesCode} language="tsx" showLineNumbers theme={dracula} codeBlock />
+                  <CopyBlock text={statesCode} language="tsx" showLineNumbers theme={customTheme} codeBlock />
                 </div>
               </TabsContent>
             </Tabs>

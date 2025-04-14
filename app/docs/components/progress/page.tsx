@@ -3,7 +3,8 @@
 import * as React from "react";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock} from "react-code-blocks";
+import { customTheme } from "@/lib/code-theme"
 
 export default function ProgressPage() {
   const [activeTab, setActiveTab] = React.useState("preview");
@@ -134,7 +135,7 @@ export { Progress }`;
                 text={usageCode}
                 language="typescript"
                 showLineNumbers={true}
-                theme={dracula}
+                theme={customTheme}
                 codeBlock
               />
             </div>
@@ -154,7 +155,7 @@ export { Progress }`;
                   text={installationCode}
                   language="bash"
                   showLineNumbers={false}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -165,7 +166,7 @@ export { Progress }`;
                   text={manualInstallationCode}
                   language="typescript"
                   showLineNumbers={true}
-                  theme={dracula}
+                  theme={customTheme}
                   codeBlock
                 />
               </div>
@@ -180,7 +181,7 @@ export { Progress }`;
               text={usageCode}
               language="typescript"
               showLineNumbers={true}
-              theme={dracula}
+              theme={customTheme}
               codeBlock
             />
           </div>
@@ -226,7 +227,7 @@ export { Progress }`;
                     text={colorCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>
@@ -276,7 +277,7 @@ export { Progress }`;
                     text={sizeCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>
@@ -308,7 +309,7 @@ export { Progress }`;
                     text={indeterminateCode}
                     language="tsx"
                     showLineNumbers
-                    theme={dracula}
+                    theme={customTheme}
                     codeBlock
                   />
                 </div>
