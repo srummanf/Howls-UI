@@ -3,6 +3,8 @@
 import * as React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import MailExample from "@/components/mail/page";
+import Auth from "@/components/authentication/page";
+import Music from "@/components/music/page";
 // import { DashboardExample } from "@/components/examples/dashboard"
 // import { MusicExample } from "@/components/examples/music"
 
@@ -41,7 +43,7 @@ export default function ExamplesPage() {
 
         {/* 📊 DASHBOARD */}
         <TabsContent value="dashboard" className="space-y-4">
-          <MailExample />
+          <Auth />
           <div className="rounded-md bg-muted p-4">
             <h3 className="text-lg font-semibold mb-2">Installation</h3>
             <CodeBlock code={`npx shadcn-ui@latest add dashboard`} />
@@ -50,7 +52,7 @@ export default function ExamplesPage() {
 
         {/* 🎵 MUSIC */}
         <TabsContent value="music" className="space-y-4">
-          <MailExample />
+          <Music />
           <div className="rounded-md bg-muted p-4">
             <h3 className="text-lg font-semibold mb-2">Installation</h3>
             <CodeBlock code={`npx shadcn-ui@latest add music`} />
