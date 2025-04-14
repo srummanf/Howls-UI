@@ -117,6 +117,34 @@ const sidebarNavItems = [
         title: "Form",
         href: "/docs/components/form",
       },
+      {
+        title: "Hover Card",
+        href: "/docs/components/hover-card",
+      },
+      {
+        title: "Input",
+        href: "/docs/components/input",
+      },
+      {
+        title: "Input OTP",
+        href: "/docs/components/input-otp",
+      },
+      {
+        title: "Label",
+        href: "/docs/components/label",
+      },
+      {
+        title: "Menubar",
+        href: "/docs/components/menubar",
+      },
+      {
+        title: "Navigation Menu",
+        href: "/docs/components/navigation-menu",
+      },
+      {
+        title: "Pagination",
+        href: "/docs/components/pagination",
+      },
     ],
   },
 ];

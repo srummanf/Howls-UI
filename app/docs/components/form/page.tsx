@@ -3,12 +3,9 @@
 import * as React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CopyBlock, dracula } from "react-code-blocks"
-import { Form } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolver/zod"
-import * as z from "zod"
+
 
 export default function FormPage() {
   const [activeTab, setActiveTab] = React.useState("preview")
