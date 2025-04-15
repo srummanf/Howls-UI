@@ -30,12 +30,20 @@ const sidebarNavItems = [
         href: "/docs/components/accordion",
       },
       {
+        title: "Action Search Bar",
+        href: "/docs/components/action-search-bar",
+      },
+      {
         title: "Alert",
         href: "/docs/components/alert",
       },
       {
         title: "Alert Dialog",
         href: "/docs/components/alert-dialog",
+      },
+      {
+        title: "Article",
+        href: "/docs/components/article",
       },
       {
         title: "Aspect Ratio",
@@ -48,6 +56,10 @@ const sidebarNavItems = [
       {
         title: "Badge",
         href: "/docs/components/badge",
+      },
+      {
+        title: "Banner",
+        href: "/docs/components/banner",
       },
       {
         title: "Breadcrumb",
@@ -192,6 +204,14 @@ const sidebarNavItems = [
       {
         title: "Slider",
         href: "/docs/components/slider",
+      },
+      {
+        title: "Sonner",
+        href: "/docs/components/sonner",
+      },
+      {
+        title: "Travel Brochure",
+        href: "/docs/components/travel-brochure",
       },
     ],
   },

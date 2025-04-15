@@ -38,6 +38,7 @@
     "culori": "^4.0.1",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.7.1",
     "input-otp": "^1.4.2",
     "jotai": "^2.12.2",
     "lucide-react": "^0.487.0",

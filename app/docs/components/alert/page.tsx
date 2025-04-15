@@ -1,17 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { 
-  Alert,
-  AlertDescription,
-  AlertTitle
-} from "@/components/ui/alert"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyBlock } from "react-code-blocks"
-import { InfoIcon } from "lucide-react"
+import * as React from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CopyBlock } from "react-code-blocks";
+import { InfoIcon } from "lucide-react";
 
 export default function AlertPage() {
-  const [activeTab, setActiveTab] = React.useState("preview")
+  const [activeTab, setActiveTab] = React.useState("preview");
 
   const customTheme = {
     lineNumberColor: "var(--muted-foreground)",
@@ -32,9 +28,9 @@ export default function AlertPage() {
     commentColor: "var(--muted-foreground)",
     classnameColor: "var(--chart-5)",
     tokenColor: "var(--foreground)",
-  }
+  };
 
-  const installationCode = `npx shadcn@latest add alert`
+  const installationCode = `npx shadcn@latest add alert`;
 
   const usageCode = `import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { InfoIcon } from "lucide-react"
@@ -49,7 +45,7 @@ export function AlertDemo() {
       </AlertDescription>
     </Alert>
   )
-}`
+}`;
 
   const manualInstallationCode = `import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -109,7 +105,7 @@ const AlertDescription = React.forwardRef<
 ))
 AlertDescription.displayName = "AlertDescription"
 
-export { Alert, AlertTitle, AlertDescription }`
+export { Alert, AlertTitle, AlertDescription }`;
 
   const variantCode = `import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { TerminalIcon } from "lucide-react"
@@ -124,14 +120,18 @@ export function AlertDestructive() {
       </AlertDescription>
     </Alert>
   )
-}`
+}`;
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10 ml-9">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
-          <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">Alert</h1>
-          <p className="text-xl text-muted-foreground">Displays a callout for user attention.</p>
+          <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
+            Alert
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Displays a callout for user attention.
+          </p>
         </div>
       </div>
 
@@ -152,7 +152,13 @@ export function AlertDestructive() {
           </TabsContent>
           <TabsContent value="code" className="mt-6">
             <div className="rounded-md bg-muted">
-              <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
+              <CopyBlock
+                text={usageCode}
+                language="typescript"
+                showLineNumbers={true}
+                theme={customTheme}
+                codeBlock
+              />
             </div>
           </TabsContent>
         </Tabs>
@@ -166,7 +172,13 @@ export function AlertDestructive() {
             </TabsList>
             <TabsContent value="cli" className="mt-6">
               <div className="rounded-md bg-muted p-4">
-                <CopyBlock text={installationCode} language="bash" showLineNumbers={false} theme={customTheme} codeBlock />
+                <CopyBlock
+                  text={installationCode}
+                  language="bash"
+                  showLineNumbers={false}
+                  theme={customTheme}
+                  codeBlock
+                />
               </div>
             </TabsContent>
             <TabsContent value="manual" className="mt-6">
@@ -186,13 +198,19 @@ export function AlertDestructive() {
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Usage</h2>
           <div className="rounded-md bg-muted">
-            <CopyBlock text={usageCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
+            <CopyBlock
+              text={usageCode}
+              language="typescript"
+              showLineNumbers={true}
+              theme={customTheme}
+              codeBlock
+            />
           </div>
         </div>
 
         <div className="space-y-6 border-t border-muted pt-8">
           <h2 className="text-2xl font-bold tracking-tight">Examples</h2>
-          
+
           <div>
             <h3 className="text-lg font-medium mb-4">Destructive</h3>
             <Tabs defaultValue="preview" className="w-full">
@@ -211,7 +229,13 @@ export function AlertDestructive() {
               </TabsContent>
               <TabsContent value="code" className="mt-6">
                 <div className="rounded-md bg-muted">
-                  <CopyBlock text={variantCode} language="typescript" showLineNumbers={true} theme={customTheme} codeBlock />
+                  <CopyBlock
+                    text={variantCode}
+                    language="typescript"
+                    showLineNumbers={true}
+                    theme={customTheme}
+                    codeBlock
+                  />
                 </div>
               </TabsContent>
             </Tabs>
@@ -232,18 +256,32 @@ export function AlertDestructive() {
               <tbody>
                 <tr className="border-t">
                   <td className="p-3 font-mono text-sm">Alert</td>
-                  <td className="p-3 font-mono text-sm">HTMLDivElement & VariantProps<br /><span className="text-muted-foreground">variant?: "default" | "destructive"</span></td>
-                  <td className="p-3">The alert container that provides context and styling.</td>
+                  <td className="p-3 font-mono text-sm">
+                    HTMLDivElement & VariantProps
+                    <br />
+                    <span className="text-muted-foreground">
+                      variant?: "default" | "destructive"
+                    </span>
+                  </td>
+                  <td className="p-3">
+                    The alert container that provides context and styling.
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="p-3 font-mono text-sm">AlertTitle</td>
                   <td className="p-3 font-mono text-sm">HTMLHeadingElement</td>
-                  <td className="p-3">The title displayed at the top of the alert.</td>
+                  <td className="p-3">
+                    The title displayed at the top of the alert.
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="p-3 font-mono text-sm">AlertDescription</td>
-                  <td className="p-3 font-mono text-sm">HTMLParagraphElement</td>
-                  <td className="p-3">The description providing more detail about the alert.</td>
+                  <td className="p-3 font-mono text-sm">
+                    HTMLParagraphElement
+                  </td>
+                  <td className="p-3">
+                    The description providing more detail about the alert.
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -251,5 +289,5 @@ export function AlertDestructive() {
         </div>
       </div>
     </div>
-  )
+  );
 }
